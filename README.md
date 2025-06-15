@@ -12,18 +12,18 @@ Aqui iremos implementar a solução proposta pela resposta mais votada e desenvo
 ## 🗂️ Estrutura do Repositório
 
 ```
-📦 debounce-throttle-test
- ┣ 📂 src
- ┃ ┣ debounce.js
- ┃ ┗ throttle.js
- ┣ 📂 tests
- ┃ ┣ debounce.test.js
- ┃ ┗ throttle.test.js
- ┣ 📜 README.md
- ┣ 📜 package.json
- ┗ 📜 jest.config.js
+📦 debounce-throttle-test/
+├── src/
+│   ├── debounce.js
+│   └── throttle.js
+├── tests/
+│   ├── debounce.test.js
+│   └── throttle.test.js
+├── .gitignore
+├── README.md
+├── jest.config.js (opcional)
+├── package.json
 ```
-
 ---
 
 ## 🎯 Objetivo
