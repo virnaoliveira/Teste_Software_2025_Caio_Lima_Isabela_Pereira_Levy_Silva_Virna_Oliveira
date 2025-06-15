@@ -1,0 +1,21 @@
+{
+  "name": "debounce-throttle-test",
+  "version": "1.0.0",
+  "description": "Projeto para teste de funções debounce e throttle com máxima cobertura",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [
+    "debounce",
+    "throttle",
+    "jest",
+    "testes"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
