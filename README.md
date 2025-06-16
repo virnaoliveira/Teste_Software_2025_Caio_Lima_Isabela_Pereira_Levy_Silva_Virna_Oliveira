@@ -1,132 +1,104 @@
+# 📦 String to Stream
 
-# 🧪 Teste de Software - Simulação de Cenário Stack Overflow
+Este projeto foi desenvolvido como parte da disciplina **Teste de Software**. O objetivo é implementar uma função que transforma uma **string comum em um Readable Stream** no Node.js, além de construir testes unitários para validar seu comportamento.
 
-Este repositório tem como objetivo simular o cenário apresentado na pergunta do Stack Overflow:
-
-**👉 [How do I create a unit test case to get maximum code coverage for my debounce and throttle functions?](https://stackoverflow.com/questions/65593662/how-do-i-create-a-unit-test-case-to-get-maximum-code-coverage-for-my-debounce-an)**
-
-Aqui iremos implementar a solução proposta pela resposta mais votada e desenvolver testes unitários focados na maximização da cobertura de código, utilizando práticas ensinadas na disciplina de **Teste de Software**.
-
----
-
-## 🗂️ Estrutura do Repositório
-
-```
-📦 debounce-throttle-test/
-├── src/
-│   ├── debounce.js
-│   └── throttle.js
-├── tests/
-│   ├── debounce.test.js
-│   └── throttle.test.js
-├── .gitignore
-├── README.md
-├── jest.config.js (opcional)
-├── package.json
-```
----
-
-## 🎯 Objetivo
-
-* Implementar as funções `debounce` e `throttle` conforme descrito na resposta mais votada da pergunta.
-* Criar testes unitários que cubram os principais fluxos de execução das funções, buscando **máxima cobertura de código (code coverage)**.
-* Aplicar conceitos de:
-
-  * Testes unitários
-  * Análise de cobertura
-  * Testes baseados em tempo (temporizadores)
-  * Teste de funções assíncronas
+O projeto foi inspirado na pergunta do Stack Overflow:  
+**“How do I generate a stream from a string?”**  
+🔗 https://stackoverflow.com/questions/1879395
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-* **Node.js**
-* **Jest** – Framework de testes
-* **Sinon** (opcional) – Mock de timers (caso necessário)
-* **Babel** (opcional) – Para suporte a ES6+
+- **Node.js** – Ambiente de execução JavaScript.
+- **Jest** – Framework de testes unitários.
+- **JavaScript (ES6+)** – Linguagem de programação.
 
 ---
 
-## 🔧 Instalação
+## 📥 Instalação
 
-1. Clone o repositório:
+1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/debounce-throttle-test.git
-cd debounce-throttle-test
+git clone https://github.com/seu-usuario/string-to-stream.git
 ```
+2. Acesse a pasta do projeto:
+   
+```
+bash
+cd string-to-stream
+```
+3. Instale as dependências:
 
-2. Instale as dependências:
-
-```bash
+```
+bash
 npm install
 ```
+---
+## 🧠 Como Usar a Função
+A função stringToStream transforma uma string em um Readable Stream.
+
+Exemplo de uso:
+
+```
+const { stringToStream } = require('./src/stringToStream');
+
+const stream = stringToStream('Olá, mundo!');
+
+stream.on('data', (chunk) => {
+  console.log(`Recebido: ${chunk}`);
+});
+
+stream.on('end', () => {
+  console.log('Leitura concluída.');
+});
+```
+Resultado esperado no console:
+
+```
+Recebido: Olá, mundo!
+Leitura concluída.
+```
 
 ---
+## 🔬 Como Executar os Testes
+Para rodar os testes unitários:
 
-## 🏗️ Scripts Disponíveis
-
-* Rodar os testes:
-
-```bash
+```
 npm test
 ```
+O Jest executará os testes localizados na pasta /tests e apresentará o resultado, além da cobertura de código.
 
-* Gerar relatório de cobertura:
+## 🔎 Gerar Relatório de Cobertura
+Execute:
 
-```bash
-npm run coverage
+```
+npx jest --coverage
+```
+---
+
+Será exibido um relatório no terminal e também gerado um diretório /coverage com arquivos HTML para visualização detalhada.
+
+## 📂 Estrutura do Projeto
+```
+string-to-stream/
+├── src/
+│   └── stringToStream.js          # Implementação da função
+├── tests/
+│   └── stringToStream.test.js     # Testes com Jest
+├── README.md                      # Documentação do projeto
+├── relatorio.md                   # Relatório acadêmico
+├── package.json                    # Configurações do projeto
+└── jest.config.js                  # Configurações opcionais do Jest
+
 ```
 
----
+## 👨‍🏫 Disciplina
+Projeto desenvolvido para a disciplina de Teste de Software, com o objetivo de aplicar conceitos de:
 
-## 🧠 Descrição da Solução
+- Criação de testes unitários.
+- Manipulação de Streams no Node.js.
+- Garantia de cobertura de código e validação de funcionalidades.
 
-### 📌 Função `debounce`
 
-> A função `debounce` garante que uma função só será executada após um certo período sem ser chamada novamente. Útil para reduzir o número de chamadas em eventos como digitação, redimensionamento de janela, etc.
-
-### 📌 Função `throttle`
-
-> A função `throttle` garante que uma função seja executada no máximo uma vez dentro de um intervalo de tempo específico, mesmo que seja chamada diversas vezes.
-
----
-
-## 🧪 Cenário de Teste
-
-* Validação de execução após o tempo limite (`debounce`)
-* Garantir que múltiplas chamadas dentro do tempo sejam ignoradas (`debounce`)
-* Verificar que a função é executada no primeiro clique e bloqueada até o tempo passar (`throttle`)
-* Testes com timers simulados para controle preciso
-* Testes de borda (ex.: tempo exatamente igual ao limite)
-
----
-
-## 📊 Cobertura de Código
-
-Após rodar:
-
-```bash
-npm run coverage
-```
-
-Será gerado um relatório como este (exemplo):
-
-| File        | % Stmts | % Branch | % Funcs | % Lines |
-| ----------- | ------- | -------- | ------- | ------- |
-| debounce.js | 100%    | 100%     | 100%    | 100%    |
-| throttle.js | 100%    | 100%     | 100%    | 100%    |
-
----
-
-## 📄 Referência
-
-* Stack Overflow: [Pergunta Original](https://stackoverflow.com/questions/65593662/how-do-i-create-a-unit-test-case-to-get-maximum-code-coverage-for-my-debounce-an)
-* Resposta utilizada: [Resposta mais votada da pergunta acima](https://stackoverflow.com/a/65593889)
-
----
-
-## 👩‍💻 Desenvolvedores
-
-* [xxx](https://github.com/seu-usuario)
