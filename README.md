@@ -21,7 +21,7 @@ O projeto foi inspirado na pergunta do Stack Overflow:
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/string-to-stream.git
+git clone https://github.com/virnaoliveira/Teste_Software_2025_Caio_Lima_Isabela_Pereira_Levy_Silva_Virna_Oliveira.git
 ```
 2. Acesse a pasta do projeto:
    
