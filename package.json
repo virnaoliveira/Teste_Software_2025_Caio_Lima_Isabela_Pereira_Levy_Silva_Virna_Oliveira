@@ -1,20 +1,12 @@
 {
-  "name": "debounce-throttle-test",
+  "name": "string-to-stream",
   "version": "1.0.0",
-  "description": "Projeto para teste de funções debounce e throttle com máxima cobertura",
-  "main": "index.js",
+  "description": "Transforma uma string em um stream legível (Readable Stream)",
+  "main": "src/stringToStream.js",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "jest"
   },
-  "keywords": [
-    "debounce",
-    "throttle",
-    "jest",
-    "testes"
-  ],
-  "author": "Seu Nome",
-  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "jest": "^29.0.0"
   }
