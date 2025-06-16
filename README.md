@@ -26,7 +26,7 @@ O objetivo foi implementar a função sugerida na resposta mais votada e aplicar
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/StreamFromString.git
+git clone https://github.com/virnaoliveira/Teste_Software_2025_Caio_Lima_Isabela_Pereira_Levy_Silva_Virna_Oliveira
 cd StreamFromString
 ```
 
